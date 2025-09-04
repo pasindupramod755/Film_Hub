@@ -96,3 +96,9 @@ function downLoadFilm(index) {
     localStorage.setItem("nameeee", document.getElementById("filmName" + index).innerText);
     console.log("pasindu")
 }
+
+
+function search(){
+    console.log(document.getElementById("default-search").value);
+    
+}
