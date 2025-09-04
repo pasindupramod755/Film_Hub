@@ -1,4 +1,5 @@
-fetch("http://www.omdbapi.com/?apikey=1c768e4f&t=" + localStorage.getItem("nameeee"))
+if(localStorage.getItem("nameeee") != null){
+    fetch("http://www.omdbapi.com/?apikey=1c768e4f&t=" + localStorage.getItem("nameeee"))
     .then((res) => res.json())
     .then((data) =>
         document.getElementById("ViewMain").innerHTML = `
@@ -38,3 +39,17 @@ fetch("http://www.omdbapi.com/?apikey=1c768e4f&t=" + localStorage.getItem("namee
         </div>
     </div>
 `)
+}else{
+   document.getElementById("ViewMain").innerHTML = `
+    <div class="min-h-screen flex items-center justify-center bg-gray-950 p-6">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-red-500 mb-3">Film Not Found</h1>
+            <p class="text-gray-400 mb-6">We couldn’t find the film you were looking for. Please try again.</p>
+            <a href="index.html">
+                <button class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg shadow hover:bg-green-700">
+                    🔙 Back to Home
+                </button>
+            </a>
+        </div>
+   ` 
+}
