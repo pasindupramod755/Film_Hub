@@ -52,6 +52,12 @@ let fileNameArray = [
     },
     {
         "name": "tiger"
+    },
+    {
+        "name": "liger"
+    },
+    {
+        "name": "fox"
     }
 ];
 
@@ -74,7 +80,7 @@ for (let i = 0; i < fileNameArray.length; i++) {
                             class="mr-1.5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg">
                             Show More
                         </a>
-                        <a href="#"
+                        <a href=""
                             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg">
                             Download
                         </a>
