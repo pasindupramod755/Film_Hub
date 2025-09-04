@@ -83,8 +83,8 @@ for (let i = 0; i < fileNameArray.length; i++) {
                     <button
                         class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700">Show
                         More</button>
-                    <button onclick="downLoadFilm(${i})"
-                        class="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg shadow hover:bg-green-700">Download</button>
+                    <a href="view.html"><button onclick="downLoadFilm(${i})"
+                        class="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg shadow hover:bg-green-700">Download</button></a>
                 </div>
             </div>
         </div>
