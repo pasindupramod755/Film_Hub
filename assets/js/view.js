@@ -1,0 +1,1 @@
+// document.getElementById("fimlnamsds").innerText = localStorage.getItem("nameeee");

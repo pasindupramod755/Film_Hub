@@ -71,7 +71,7 @@ for (let i = 0; i < fileNameArray.length; i++) {
             class="max-w-sm bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden dark:bg-gray-800 dark:border-gray-700">
             <img class="w-full h-72 object-cover" src="${data.Poster}" alt="${data.Title} Poster">
             <div class="p-5">
-                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">${data.Title}</h2>
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center" id="filmName${i}">${data.Title}</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 text-center">${data.Year} • ${data.Genre}</p>
                 <div class="flex items-center justify-center mt-3 space-x-2">
                     <span class="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full">⭐
@@ -94,4 +94,5 @@ for (let i = 0; i < fileNameArray.length; i++) {
 
 function downLoadFilm(index) {
     localStorage.setItem("nameeee", document.getElementById("filmName" + index).innerText);
+    console.log("pasindu")
 }
