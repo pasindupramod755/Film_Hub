@@ -67,25 +67,32 @@ for (let i = 0; i < fileNameArray.length; i++) {
         .then((res) => res.json())
         .then((data) =>
             document.getElementById("mainDetails").innerHTML += `
-            <div
-                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                <a href="#"><img class="w-full h-60 object-cover rounded-t-lg" src="${data.Poster}" alt="" /></a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
-                            ${data.Title}</h5>
-                    </a>
-                    <div class="flex justify-center">
-                        <a href="#"
-                            class="mr-1.5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg">
-                            Show More
-                        </a>
-                        <a href=""
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg">
-                            Download
-                        </a>
-                    </div>
+                <div
+            class="max-w-sm bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+            <img class="w-full h-72 object-cover" src="${data.Poster}" alt="${data.Title} Poster">
+            <div class="p-5">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center" id="filmName${i}">${data.Title}</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 text-center">${data.Year} • ${data.Genre}</p>
+                <div class="flex items-center justify-center mt-3 space-x-2">
+                    <span class="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full">⭐
+                        ${data.imdbRating}/10</span>
+                    <span
+                        class="bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded-full">${data.Rated}</span>
+                </div>
+                <div class="flex justify-center mt-4 space-x-3">
+                    <button
+                        class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700">Show
+                        More</button>
+                    <a href="view.html"><button onclick="downLoadFilm(${i})"
+                        class="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg shadow hover:bg-green-700">Download</button></a>
                 </div>
             </div>
-`)
+        </div>
+        `
+        )
+}
+
+function downLoadFilm(index) {
+    localStorage.setItem("nameeee", document.getElementById("filmName" + index).innerText);
+    console.log("pasindu")
 }
