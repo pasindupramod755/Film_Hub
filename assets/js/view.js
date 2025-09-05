@@ -1,5 +1,5 @@
 if(localStorage.getItem("nameeee") != null){
-    fetch("http://www.omdbapi.com/?apikey=1c768e4f&t=" + localStorage.getItem("nameeee"))
+    fetch("https://www.omdbapi.com/?apikey=1c768e4f&t=" + localStorage.getItem("nameeee"))
     .then((res) => res.json())
     .then((data) =>
         document.getElementById("ViewMain").innerHTML = `

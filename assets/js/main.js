@@ -63,7 +63,7 @@ let fileNameArray = [
 
 
 for (let i = 0; i < fileNameArray.length; i++) {
-    fetch("http://www.omdbapi.com/?apikey=1c768e4f&t=" + fileNameArray[i].name)
+    fetch("https://www.omdbapi.com/?apikey=1c768e4f&t=" + fileNameArray[i].name)
         .then((res) => res.json())
         .then((data) =>
             document.getElementById("mainDetails").innerHTML += `
