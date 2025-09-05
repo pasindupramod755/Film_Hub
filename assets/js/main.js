@@ -44,21 +44,21 @@ let fileNameArray = [
     {
         "name": "varisu"
     },
-    // {
-    //     "name": "bigil"
-    // },
-    // {
-    //     "name": "sinhaya"
-    // },
-    // {
-    //     "name": "tiger"
-    // },
-    // {
-    //     "name": "liger"
-    // },
-    // {
-    //     "name": "fox"
-    // }
+    {
+        "name": "bigil"
+    },
+    {
+        "name": "sinhaya"
+    },
+    {
+        "name": "tiger"
+    },
+    {
+        "name": "liger"
+    },
+    {
+        "name": "fox"
+    }
 ];
 
 
