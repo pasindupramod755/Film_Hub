@@ -44,21 +44,21 @@ let fileNameArray = [
     {
         "name": "varisu"
     },
-    {
-        "name": "bigil"
-    },
-    {
-        "name": "sinhaya"
-    },
-    {
-        "name": "tiger"
-    },
-    {
-        "name": "liger"
-    },
-    {
-        "name": "fox"
-    }
+    // {
+    //     "name": "bigil"
+    // },
+    // {
+    //     "name": "sinhaya"
+    // },
+    // {
+    //     "name": "tiger"
+    // },
+    // {
+    //     "name": "liger"
+    // },
+    // {
+    //     "name": "fox"
+    // }
 ];
 
 
@@ -98,7 +98,7 @@ function downLoadFilm(index) {
 }
 
 function search() {
-    fetch("http://www.omdbapi.com/?apikey=1c768e4f&t=" + document.getElementById("default-search").value)
+    fetch("https://www.omdbapi.com/?apikey=1c768e4f&t=" + document.getElementById("default-search").value)
         .then((res) => res.json())
         .then((data) => {
             if (data.Response !== "False") {  
