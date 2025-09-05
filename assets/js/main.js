@@ -101,7 +101,7 @@ function search() {
     fetch("http://www.omdbapi.com/?apikey=1c768e4f&t=" + document.getElementById("default-search").value)
         .then((res) => res.json())
         .then((data) => {
-            if (data.Response !== "False") {   // OMDB returns "False" as a string, not boolean
+            if (data.Response !== "False") {  
                 document.getElementById("MainSearch").innerHTML = `
                 <div class="min-h-screen bg-gray-950 text-white flex items-center justify-center p-6 m-7">
                     <div class="max-w-5xl w-full bg-gray-900 rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
@@ -115,13 +115,6 @@ function search() {
                             <p class="text-gray-300 mb-4"><span class="font-semibold">Actors: </span>${data.Actors}</p>
                             <p class="text-gray-400 leading-relaxed mb-6">${data.Plot}</p>
                             <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                                <a href="index.html" class="w-full sm:w-auto">
-                                    <button
-                                        class="w-full sm:w-auto px-6 py-3 text-base font-medium text-white bg-gray-600 rounded-lg shadow hover:bg-gray-700"
-                                        onclick="alert('⬅️ Going Back!')">
-                                        Back
-                                    </button>
-                                </a>
                                 <a href="index.html" class="w-full sm:w-auto">
                                     <button
                                         class="w-full sm:w-auto px-6 py-3 text-base font-medium text-white bg-green-600 rounded-lg shadow hover:bg-green-700"
